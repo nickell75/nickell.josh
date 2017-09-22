@@ -13,3 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+	margin: auto;
+	align-content: center;
+}
+
+body {
+	background-color: Aqua;
+	align-content: center;
+	padding: .5em;
+}
+
+h1 {
+	font-family: sans-serif;
+	text-align: : center;
+}
+
+div {
+	align-content: center
+}
+
+/* Not sure if i want to use the sessions nav bar settings */
+#user-session-nav {
+  justify-content: flex-start;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(hsl(120,0%,30%), black, black);
+  width: 100%;
+  font-size: 20px;
+}
+
+#user-session-nav li {
+  float: left;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-session-nav li a {
+  color: white;
+  vertical-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  height: 101px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-session-nav li a:hover {
+  background-color: dimgray;
+}
+
+#user-session-nav li:last-child {
+  float: right;
+  padding-right: 10px;
+}
