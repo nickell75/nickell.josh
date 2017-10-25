@@ -14,24 +14,65 @@
  *= require_self
  */
 
-html {
-	margin: auto;
-	align-content: center;
+body, html {
+  height: 100%;
+  margin: 0; 
+  padding: 0;
+}
+.parallax {
+    /* The image used */
+    background-image: url("lake_tahoe.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 0 -400px; }
+}*/
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
 
 body {
-	background-color: Aqua;
-	align-content: center;
-	padding: .5em;
+  align-content: center;
 }
 
 h1 {
 	font-family: sans-serif;
-	text-align: : center;
 }
 
-div {
-	align-content: center
+h5 {
+  font-family: cursive;
+  font-size: 1.9em;
+}
+
+.container {
+  padding: 0 15px 0 15px;
+  height: 55%;
+  width: 100%;
+  border-radius: 5px;  
+  margin-top: 500px;
+
+  background: linear-gradient(hsl(100,0%,30%), #87C6DC, #42A3C6);
+}
+p {
+  
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.3em;
 }
 
 /* Not sure if i want to use the sessions nav bar settings */
@@ -41,14 +82,14 @@ div {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: linear-gradient(hsl(120,0%,30%), black, black);
+  background: linear-gradient(hsl(100,0%,30%), black, black);
   width: 100%;
   font-size: 20px;
 }
 
 #user-session-nav li {
   float: left;
-  height: 101px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,4 +114,9 @@ div {
 #user-session-nav li:last-child {
   float: right;
   padding-right: 10px;
+}
+
+footer {
+  color: white;
+  text-align: center;
 }

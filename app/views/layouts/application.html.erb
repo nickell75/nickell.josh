@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NickellJosh</title>
+    <title>JoshNickell</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,31 +9,34 @@
   </head>
 
   <header>
-    <div id="top-box"></div>
-    <div id="top-box-line"></div>
-    <ul id="user-session-nav">
-      <% if current_user %>
-        
-        <li><%= link_to "Logout", logout_path, method: 'delete' %></li>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "#{current_user.username}", user_path(current_user) %></li>
-      <% else %>
+  	<nav> 
+	    <ul id="user-session-nav">
+	      <% if current_user %>
+	        
+	        <li><%= link_to "Logout", logout_path, method: 'delete' %></li>
+	        <li><%= link_to "Home", root_path %></li>
+	        <li><%= link_to "#{current_user.username}", user_path(current_user) %></li>
+	      <% else %>
 
-        <li><%= link_to 'Login', login_path %></li>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to 'Signup', signup_path %></li>
+	        <li><%= link_to 'Login', login_path %></li>
+	        <li><%= link_to "Home", root_path %></li>
+	        <li><%= link_to 'Signup', signup_path %></li>
 
-      <% end %>
-      
-    </ul>
+	      <% end %>
+	    </ul>
+	   </nav>
   </header>
 
-  <body>
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
+  <body class="parallax", style="align-content: center;" >
+	  <% if flash[:notice] %>
+	    <div class="notice"><%= flash[:notice] %></div>
+	  <% end %>
 
-  <body>
     <%= yield %>
   </body>
+
+  <footer>
+  	Nickell & Dime Productions &copy 2017
+  </footer>
+  
 </html>
