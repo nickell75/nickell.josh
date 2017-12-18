@@ -14,65 +14,44 @@
  *= require_self
  */
 
-body, html {
+ @charset "utf-8";
+ /* CSS Document */
+
+ body, html {
   height: 100%;
   margin: 0; 
   padding: 0;
 }
-.parallax {
-    /* The image used */
-    background-image: url("lake_tahoe.jpg");
 
-    /* Set a specific height */
-    min-height: 500px; 
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/*@-webkit-keyframes slide {
-    from { background-position: 0 0; }
-    to { background-position: 0 -400px; }
-}*/
-
-nav {
-    overflow: hidden;
-    background-color: #333;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-}
-
-body {
+body{
+  margin-top: 100px;
+  min-width: 980px;
+  padding: 0;
   align-content: center;
 }
-
-h1 {
-	font-family: sans-serif;
-}
-
-h5 {
-  font-family: cursive;
-  font-size: 1.9em;
-}
-
-.container {
-  padding: 0 15px 0 15px;
-  height: 55%;
+.parallax {
+  background-image: url("lake_tahoe.jpg");
   width: 100%;
-  border-radius: 5px;  
-  margin-top: 500px;
+  min-height: 500px; 
 
-  background: linear-gradient(hsl(100,0%,30%), #87C6DC, #42A3C6);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-p {
-  
-  text-align: center;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 1.3em;
+
+@-webkit-keyframes slide {
+  from { background-position: 0 0; }
+  to { background-position: 0 -400px; }
+}
+
+nav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
 
 /* Not sure if i want to use the sessions nav bar settings */
@@ -116,7 +95,155 @@ p {
   padding-right: 10px;
 }
 
+p{
+  margin: 0 0 20px 0;  
+  font-size: 18px; 
+  text-shadow: 1px 1px black;   
+}
+
+p, ul{
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*font-size-adjust:1 ;*/
+  font-weight:200;
+  font-style:normal;
+}
+
+img{
+  border: 0;
+  width: 100%;
+}
+
+h1, #pixels{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size-adjust:0.40;
+  font-weight:700;
+  font-style:normal;
+}
+
+h2{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size-adjust:0.531;
+  font-weight:500;
+  font-style:normal;
+}
+
+#header h1, #pixels{
+  color: #48941A;
+}
+
+.float-left{
+  float: left;    
+  margin: 0 0 0 20px;
+}
+
+.float-right{
+  float: right;
+  margin: 0 20px 0 0;
+}
+
+.center{
+  font-size: 2.5em;
+  padding: 80px 0 0 0;
+  text-align: center;
+}
+
+#nav{
+  list-style: none;
+  position: fixed;
+  right: 20px;
+}
+
+#nav li{
+  margin: 0 0 15px 0;     
+}
+
+#header, #intro, #second{
+  width: 100%;
+}
+
+#intro{
+  
+  background: url(https://www.solodev.com/assets/parallax/secondBG.jpg) 50% 0 no-repeat fixed;
+  background-size: cover;
+  color: white;
+  height: 700px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+#intro .bf{
+  background: url("ruby_icon.jpg") 80% 0 no-repeat fixed;
+  background-size: 80px 80px;
+  background-position: right center;
+  background-attachment: fixed;
+  height: 1300px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  z-index: 200;
+  max-width: 1900px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#second{
+  
+  background:url(https://www.solodev.com/assets/parallax/work.jpg) 50% 0 no-repeat fixed;
+  background-size: cover;
+  color: white;
+  height: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+#second .bg{
+  background: url("DBC_logo.png") 30% 0 no-repeat fixed;
+  height: 1300px;
+  margin: 0 auto;
+  padding: 0;
+  position: absolute;
+  z-index: 200;
+  max-width: 1900px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#third{
+  background: url(https://www.solodev.com/assets/parallax/creative.jpg) 50% 0 no-repeat fixed;
+  background-size: cover;
+  color: white;
+  height: 650px;
+  padding: 100px 0 0 0;   
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+#fifth{
+  background: #ccc;
+  height: 400px;
+  margin: 0 auto;
+  padding: 40px 0 0 0;
+}
+
+.story{
+  margin: 0 auto;
+  min-width: 980px;
+  overflow: auto;
+  width: 980px;
+}
+
+.story .float-left, .story .float-right{
+  padding: 100px 0 0 0;
+  position: relative;
+  width: 350px;   
+}
+
 footer {
   color: white;
+  font-size: 1.5em;
   text-align: center;
 }
